@@ -583,7 +583,9 @@ footer {
   .scroll-top-btn {
     bottom: 24px;
     right: 24px;
-    padding: 10px 16px;
+    width: 48px;
+    height: 48px;
+    font-size: 0.65rem;
   }
 }
 
@@ -592,17 +594,20 @@ footer {
   position: fixed;
   bottom: 40px;
   right: 40px;
-  background-color: var(--bg-color);
-  color: var(--text-main);
-  border: 1px solid var(--border-color);
-  border-radius: var(--radius-full);
-  padding: 12px 20px;
+  background-color: var(--text-main);
+  color: #ffffff;
+  border: none;
+  border-radius: 50%;
+  width: 56px;
+  height: 56px;
   display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  gap: 4px;
+  gap: 0;
   font-weight: 700;
-  font-size: 0.95rem;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  font-size: 0.75rem;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.15);
   cursor: pointer;
   z-index: 1000;
   opacity: 0;
@@ -610,6 +615,12 @@ footer {
   pointer-events: none;
   transition: opacity 0.3s ease, transform 0.3s ease, background-color 0.2s;
   font-family: var(--font-family);
+  padding: 0;
+}
+
+.scroll-top-btn .material-symbols-rounded {
+  font-size: 1.5rem;
+  margin-bottom: -2px;
 }
 
 .scroll-top-btn.show {
@@ -619,5 +630,5 @@ footer {
 }
 
 .scroll-top-btn:hover {
-  background-color: var(--bg-light);
+  background-color: #333333;
 }
