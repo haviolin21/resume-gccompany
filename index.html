@@ -28,7 +28,6 @@
                     <a href="#education">학력·교육</a>
                 </div>
             </div>
-            <!-- 다크모드 스위치 제거됨 (라이트 모드 고정) -->
         </div>
     </nav>
 
@@ -114,10 +113,10 @@
             </div>
         </section>
 
-        <!-- Motivation -->
+        <!-- Motivation (changed to cleaner borderless layout) -->
         <section id="motivation" class="section bg-light">
             <h2 class="section-title">지원 동기</h2>
-            <div class="card motivation-card">
+            <div class="motivation-content">
                 <p>
                     여행은 단순한 소비가 아니라, 일상 속에서 새로운 경험을 만들어내는 중요한 순간이라고 생각합니다. 그런 점에서 “놀라운 경험이 삶에 끊이지 않도록”이라는 여기어때의 미션은, 고객이 여행을 통해 얻는 가치를 서비스로 연결하고자 하는 방향성과 맞닿아 있다고 느꼈습니다.
                 </p>
@@ -133,24 +132,22 @@
             </div>
         </section>
 
-        <!-- Experience -->
+        <!-- Experience 2-Column HR Style -->
         <section id="experience" class="section">
             <div class="section-header">
-                <h2 class="section-title">경력 사항</h2>
+                <h2 class="section-title" style="margin-bottom:0;">경력 사항</h2>
                 <span class="total-exp">총 경력 7년</span>
             </div>
             
-            <div class="timeline">
+            <div class="list-container">
                 <!-- 김캐디 -->
-                <div class="timeline-item card">
-                    <div class="timeline-header">
-                        <div>
-                            <h3 class="company-name">김캐디</h3>
-                            <div class="role">리드 (운영팀)</div>
-                        </div>
-                        <div class="duration">2025.06 – 2026.02 (9개월)</div>
+                <div class="list-row">
+                    <div class="list-left">
+                        <div class="duration">2025.06 – 2026.02<br><span style="font-size:0.9rem; color:var(--text-muted);">(9개월)</span></div>
+                        <h3 class="company-name">김캐디</h3>
+                        <div class="role">리드 (운영팀)</div>
                     </div>
-                    <div class="timeline-body">
+                    <div class="list-right">
                         <div class="exp-section">
                             <h4>주요 성과</h4>
                             <ul class="check-list">
@@ -173,22 +170,20 @@
                         <div class="tech-stack">
                             <span class="tech-tag"><i class="devicon-apache-plain colored"></i>SuperSet</span>
                             <span class="tech-tag"><i class="devicon-amazonwebservices-plain colored"></i>Amazon Redshift</span>
-                            <span class="tech-tag">💬채널톡</span>
-                            <span class="tech-tag">📞센터플로우</span>
+                            <span class="tech-tag">💬 채널톡</span>
+                            <span class="tech-tag">📞 센터플로우</span>
                         </div>
                     </div>
                 </div>
 
                 <!-- 중고나라 -->
-                <div class="timeline-item card">
-                    <div class="timeline-header">
-                        <div>
-                            <h3 class="company-name">중고나라</h3>
-                            <div class="role">매니저 (결제제휴사업팀)</div>
-                        </div>
-                        <div class="duration">2022.03 – 2024.04 (2년 2개월)</div>
+                <div class="list-row">
+                    <div class="list-left">
+                        <div class="duration">2022.03 – 2024.04<br><span style="font-size:0.9rem; color:var(--text-muted);">(2년 2개월)</span></div>
+                        <h3 class="company-name">중고나라</h3>
+                        <div class="role">매니저 (결제제휴사업팀)</div>
                     </div>
-                    <div class="timeline-body">
+                    <div class="list-right">
                         <div class="exp-section">
                             <h4>주요 성과</h4>
                             <ul class="check-list">
@@ -215,23 +210,21 @@
                             <span class="tech-tag"><i class="devicon-mysql-plain colored"></i>MySQL</span>
                             <span class="tech-tag"><i class="devicon-postgresql-plain colored"></i>PostgreSQL</span>
                             <span class="tech-tag"><i class="devicon-amazonwebservices-plain colored"></i>Amazon Redshift</span>
-                            <span class="tech-tag">🚀AppsFlyer</span>
-                            <span class="tech-tag">🌉Airbridge</span>
+                            <span class="tech-tag">🚀 AppsFlyer</span>
+                            <span class="tech-tag">🌉 Airbridge</span>
                             <span class="tech-tag"><i class="devicon-google-plain colored"></i>GA4</span>
                         </div>
                     </div>
                 </div>
 
                 <!-- 브랜즈컴퍼니 -->
-                <div class="timeline-item card">
-                    <div class="timeline-header">
-                        <div>
-                            <h3 class="company-name">브랜즈컴퍼니㈜ (전.스카이랩㈜)</h3>
-                            <div class="role">팀장 (마케팅기획)</div>
-                        </div>
-                        <div class="duration">2021.05 – 2022.01 (9개월)</div>
+                <div class="list-row">
+                    <div class="list-left">
+                        <div class="duration">2021.05 – 2022.01<br><span style="font-size:0.9rem; color:var(--text-muted);">(9개월)</span></div>
+                        <h3 class="company-name">브랜즈컴퍼니㈜<br><span style="font-size:1rem;color:var(--text-muted);">(전.스카이랩㈜)</span></h3>
+                        <div class="role">팀장 (마케팅기획)</div>
                     </div>
-                    <div class="timeline-body">
+                    <div class="list-right">
                         <div class="exp-section">
                             <h4>주요 성과</h4>
                             <ul class="check-list">
@@ -252,15 +245,13 @@
                 </div>
 
                 <!-- 쿠팡 -->
-                <div class="timeline-item card">
-                    <div class="timeline-header">
-                        <div>
-                            <h3 class="company-name">쿠팡(주)</h3>
-                            <div class="role">L4 (Pricing Operation)</div>
-                        </div>
-                        <div class="duration">2020.04 – 2020.08 (5개월)</div>
+                <div class="list-row">
+                    <div class="list-left">
+                        <div class="duration">2020.04 – 2020.08<br><span style="font-size:0.9rem; color:var(--text-muted);">(5개월)</span></div>
+                        <h3 class="company-name">쿠팡(주)</h3>
+                        <div class="role">L4 (Pricing Operation)</div>
                     </div>
-                    <div class="timeline-body">
+                    <div class="list-right">
                         <div class="exp-section">
                             <h4>주요 성과</h4>
                             <ul class="check-list">
@@ -282,15 +273,13 @@
                 </div>
 
                 <!-- 위메프 -->
-                <div class="timeline-item card">
-                    <div class="timeline-header">
-                        <div>
-                            <h3 class="company-name">(주)위메프</h3>
-                            <div class="role">사원 (판촉운영팀)</div>
-                        </div>
-                        <div class="duration">2017.12 – 2020.03 (2년 4개월)</div>
+                <div class="list-row">
+                    <div class="list-left">
+                        <div class="duration">2017.12 – 2020.03<br><span style="font-size:0.9rem; color:var(--text-muted);">(2년 4개월)</span></div>
+                        <h3 class="company-name">(주)위메프</h3>
+                        <div class="role">사원 (판촉운영팀)</div>
                     </div>
-                    <div class="timeline-body">
+                    <div class="list-right">
                         <div class="exp-section">
                             <h4>주요 성과</h4>
                             <ul class="check-list">
@@ -313,92 +302,56 @@
         </section>
 
         <!-- Projects -->
-        <section id="projects" class="section bg-light" style="margin-bottom:0;">
+        <section id="projects" class="section">
             <h2 class="section-title">주요 프로젝트</h2>
-            <div class="projects-grid">
+            <div class="list-container">
                 
-                <div class="project-card card modal-trigger" data-target="modal-1">
-                    <div class="project-header">
-                        <h3>예약 IVR 자동화 구축</h3>
-                        <div class="project-meta">연간 운영비 2억 원 절감 | 25.07 – 25.09</div>
+                <div class="list-row project-card modal-trigger" data-target="modal-1">
+                    <div class="list-left">
+                        <div class="duration">25.07.29 – 25.09.21</div>
+                        <h3 class="company-name">예약 담당자 IVR 대체</h3>
+                        <div class="role">김캐디</div>
                     </div>
-                    <div class="project-body">
+                    <div class="list-right">
                         <div class="p-block">
-                            <h4>문제 정의</h4>
-                            <p>예약 담당자가 근무하지 않는 시간대에는 전화 예약 대응이 불가능해 결제 실패가 발생. 프리랜서 인력 운영으로 인한 비용 부담 및 리스크 존재.</p>
-                        </div>
-                        <div class="p-block">
-                            <h4>실행</h4>
-                            <p>운영 데이터 분석을 통해 해당 업무 비중을 확인하고, 전화 예약 운영을 IVR 기반 자동화로 전환. 수락·거절 시나리오 설계, 파일럿 테스트, 매장 인터뷰로 사용자 거부감 검증. 개발팀 협업으로 시스템 도입 및 대시보드 구축.</p>
-                        </div>
-                        <div class="p-block result-block">
-                            <h4>결과</h4>
-                            <ul>
-                                <li>미운영 시간대 예약 성공률 50% → 70% 개선</li>
-                                <li>연간 약 2억 원 인건비 → 월 약 200만 원 IVR 비용으로 절감</li>
-                                <li>24시간 예약 대응 체계 구축 및 운영 리스크 감소</li>
-                            </ul>
+                            <p>예약 담당자가 근무하지 않는 시간대 결제 실패를 방지하고 운영 효율성을 증대하기 위해 진행한 선행 프로젝트입니다.</p>
                         </div>
                         <div class="card-action">
-                            <span>자세히 보기</span>
+                            <span>과정 및 상세 보기</span>
                             <span class="material-symbols-rounded">arrow_forward</span>
                         </div>
                     </div>
                 </div>
 
-                <div class="project-card card modal-trigger" data-target="modal-2">
-                    <div class="project-header">
-                        <h3>퍼널 개선을 통한 결제액 2.4배 성장</h3>
-                        <div class="project-meta">페이 결제액 2.4배 성장 | 23.04 – 23.12</div>
+                <div class="list-row project-card modal-trigger" data-target="modal-2">
+                    <div class="list-left">
+                        <div class="duration">23.04.07 – 23.12.31</div>
+                        <h3 class="company-name">페이 결제액 증대</h3>
+                        <div class="role">중고나라</div>
                     </div>
-                    <div class="project-body">
+                    <div class="list-right">
                         <div class="p-block">
-                            <h4>문제 정의</h4>
-                            <p>중고나라 페이 결제액 정체. 사용자 행동 데이터를 기반으로 결제 퍼널 이탈 구간 분석 및 개선 필요.</p>
-                        </div>
-                        <div class="p-block">
-                            <h4>실행</h4>
-                            <p>SQL 활용해 퍼널(탐색-채팅-결제) 분석, 채팅 단계 이탈 확인. 카페 게시글 자동 댓글 생성 기능으로 판매자를 앱 채팅으로 유도. 상위 10% 핵심 거래자 세그먼트 관리 및 리워드 정책 제공.</p>
-                        </div>
-                        <div class="p-block result-block">
-                            <h4>결과</h4>
-                            <ul>
-                                <li>2023년 최고 결제액 및 KPI 목표 달성</li>
-                                <li>결제액 2.4배 성장</li>
-                                <li>상위 거래자 거래액 약 20% 상승</li>
-                            </ul>
+                            <p>중고나라 페이 결제액 성장이 정체된 상황에서, 사용자 행동 데이터(가설)를 수집 및 분석하여 퍼널의 이탈을 막아낸 프로젝트입니다.</p>
                         </div>
                         <div class="card-action">
-                            <span>자세히 보기</span>
+                            <span>과정 및 상세 보기</span>
                             <span class="material-symbols-rounded">arrow_forward</span>
                         </div>
                     </div>
                 </div>
 
-                <div class="project-card card modal-trigger" data-target="modal-3">
-                    <div class="project-header">
-                        <h3>카페–앱 연동 전략 구축</h3>
-                        <div class="project-meta">회원 1.6배 성장 | 22.03 – 22.12</div>
+                <div class="list-row project-card modal-trigger" data-target="modal-3">
+                    <div class="list-left">
+                        <div class="duration">22.03.15 – 22.12.31</div>
+                        <h3 class="company-name">카페-앱 회원 연동</h3>
+                        <div class="role">중고나라</div>
                     </div>
-                    <div class="project-body">
+                    <div class="list-right">
                         <div class="p-block">
-                            <h4>문제 정의</h4>
-                            <p>중고나라 앱 MAU 및 상품 등록 수 확대 필요. 1900만 명 규모의 네이버 카페 회원을 앱 사용자로 전환할 전략 요구.</p>
-                        </div>
-                        <div class="p-block">
-                            <h4>실행</h4>
-                            <p>카페-앱 계정 연동 기능 기획 및 프로세스 설계. 구글폼 기반 초기 운영 후 시스템 자동화. 연동 회원 증가 → 상품 등록 증가 → 결제 증가로 이어지는 단계적 이벤트 설계.</p>
-                        </div>
-                        <div class="p-block result-block">
-                            <h4>결과</h4>
-                            <ul>
-                                <li>회원 수 1.6배 증가, 상품 등록 수 2배 증가</li>
-                                <li>연동 회원의 활동 지표 일반 회원 대비 약 20% 높음</li>
-                                <li>저비용 성장 구조 확보</li>
-                            </ul>
+                            <p>1900만 명 규모의 네이버 카페 회원 풀을 앱 사용자로 전환하여 중고나라 앱 MAU 및 상품 활성화 지표를 끌어올린 프로젝트입니다.</p>
                         </div>
                         <div class="card-action">
-                            <span>자세히 보기</span>
+                            <span>과정 및 상세 보기</span>
                             <span class="material-symbols-rounded">arrow_forward</span>
                         </div>
                     </div>
@@ -408,23 +361,25 @@
         </section>
 
         <!-- Education & Training -->
-        <section id="education" class="section">
+        <section id="education" class="section" style="border-bottom:none;">
             <h2 class="section-title">학력 및 교육</h2>
-            <div class="grid-2">
-                <div class="card edu-card">
-                    <div class="card-icon"><span class="material-symbols-rounded">school</span></div>
-                    <div class="edu-info">
-                        <h3>상명대학교(천안)</h3>
-                        <p class="edu-major">학사 / 금융경영학과</p>
-                        <p class="edu-date">2010.03 – 2016.08</p>
+            <div class="list-container">
+                <div class="list-row edu-card">
+                    <div class="list-left">
+                        <div class="duration">2010.03 – 2016.08</div>
+                        <h3 class="company-name">상명대학교(천안)</h3>
+                    </div>
+                    <div class="list-right">
+                        <p class="role">금융경영학과 학사 졸업</p>
                     </div>
                 </div>
-                <div class="card edu-card">
-                    <div class="card-icon"><span class="material-symbols-rounded">query_stats</span></div>
-                    <div class="edu-info">
-                        <h3>Codeit</h3>
-                        <p class="edu-major">빅데이터 분석</p>
-                        <p class="edu-date">2025.02 – 2025.03</p>
+                <div class="list-row edu-card">
+                    <div class="list-left">
+                        <div class="duration">2025.02 – 2025.03</div>
+                        <h3 class="company-name">Codeit</h3>
+                    </div>
+                    <div class="list-right">
+                        <p class="role">빅데이터 분석 수료</p>
                         <ul class="mt-2">
                             <li>Python(Pandas) 기반 데이터 전처리 및 분석</li>
                             <li>데이터 시각화(Matplotlib 등)를 통한 지표 분석 및 인사이트 도출</li>
@@ -432,12 +387,13 @@
                         </ul>
                     </div>
                 </div>
-                <div class="card edu-card">
-                    <div class="card-icon"><span class="material-symbols-rounded">code</span></div>
-                    <div class="edu-info">
-                        <h3>코드스테이츠 (Code States)</h3>
-                        <p class="edu-major">Software engineering</p>
-                        <p class="edu-date">2020.12 – 2021.04</p>
+                <div class="list-row edu-card">
+                    <div class="list-left">
+                        <div class="duration">2020.12 – 2021.04</div>
+                        <h3 class="company-name">코드스테이츠 (Code States)</h3>
+                    </div>
+                    <div class="list-right">
+                        <p class="role">Software engineering 수료</p>
                         <ul class="mt-2">
                             <li>웹 서비스 구조 및 데이터베이스 설계 이해</li>
                             <li>API 및 서버–클라이언트 구조 기반 서비스 동작 이해</li>
@@ -454,7 +410,7 @@
         <div class="footer-content container">
             <p><strong>하윤택 (HA YUNTAEK)</strong> | 운영 전문가</p>
             <p><strong>Mobile:</strong> 010-4795-3330 | <strong>Email:</strong> yuntaek.ha@gmail.com</p>
-            <p style="margin-top: 12px; font-size: 0.8rem; color: #adb5bd;">© 2026 HA YUNTAEK. All rights reserved. 본 이력서에 기재된 사항은 모두 사실과 다름없음을 확인합니다.</p>
+            <p style="margin-top: 12px; font-size: 0.8rem; color: var(--text-muted);">© 2026 HA YUNTAEK. All rights reserved. 본 이력서에 기재된 사항은 모두 사실과 다름없음을 확인합니다.</p>
         </div>
     </footer>
 
@@ -485,7 +441,7 @@
                     <p>이러한 분석을 바탕으로 사람 중심의 전화 예약 운영을 IVR 기반 자동화로 전환할 경우, 운영 리스크를 제거하고 비용을 절감하는 동시에 24시간 예약 대응을 통해 예약 성과를 개선할 수 있을 것이라는 가설을 수립했습니다.</p>
                     <p>기존 예약 담당자의 주요 역할은 예약 수락 또는 거절 여부를 확인하는 것이었기 때문에 IVR 시나리오 설계 자체는 비교적 단순하게 시작할 수 있었습니다. 초기에는 버튼 입력만으로 수락과 거절이 이루어지도록 설계했으나, 수락을 잘못 선택할 경우 복구가 불가능하다는 리스크를 발견했습니다. 이에 수락 시 한 번 더 확인 절차를 거치도록 시나리오를 보완해 안정성을 확보했습니다.</p>
                     <p>도입에 앞서 거래액 규모별로 매장을 선정해 파일럿 테스트를 진행하고, IVR 음성 안내에 대한 거부감 여부를 사전 인터뷰로 검증했습니다. 우려와 달리 대부분의 매장 사장님들은 사람이 아닌 자동 응답이라 하더라도 예약만 정상적으로 처리된다면 큰 불편을 느끼지 않는다는 의견을 보였고, 이를 근거로 IVR를 전면 도입했습니다.</p>
-                    <p>그 결과 예약 담당자 미운영 시간대의 예약 성공률이 50%에서 70% 수준으로 개선되었으며, 연간 약 2억 원 규모의 인건비를 월 200만 원 수준의 IVR 통화 비용으로 대체하는 성과를 거둘 수 있었습니다. 또한 전체 예약 건수 증가에도 약 5% 수준으로 기여하며 플랫폼 운영 성과 개선에 긍정적인 영향을 미쳤습니다.</p>
+                    <p>그 결과 예약 담당자 미운영 시간대의 예약 성공률이 50%에서 70% 수준으로 개선되었으며, 연간 약 2억 원 규모의 인건비를 월 200만 원 수준의 IVR 통화 비용으로 대체하는 성과 거둘 수 있었습니다. 또한 전체 예약 건수 증가에도 약 5% 수준으로 기여하며 플랫폼 운영 성과 개선에 긍정적인 영향을 미쳤습니다.</p>
                     <p>본 프로젝트를 통해 운영 리스크가 높은 영역을 데이터로 식별하고 우선순위를 정해 해결하는 경험을 쌓았습니다. 사람이 전화를 받아야 한다는 내부 우려에 대해서도 정량적인 분석과 파일럿 결과를 통해 설득하며 실행으로 이어냈고, 기획부터 시나리오 설계, 개발 협업, 성과 분석과 개선까지 전 과정을 주도하며 플랫폼 운영 자동화 프로젝트를 끝까지 완결시킨 경험을 확보했습니다.</p>
                 </div>
             </div>
