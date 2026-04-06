@@ -116,8 +116,12 @@ ul {
   transition: color 0.2s ease;
 }
 
-.nav-links a:hover, .nav-links a.active {
-  color: var(--text-main); /* Used dark instead of red for cleaner look */
+.nav-links a:hover {
+  color: var(--text-main);
+  font-weight: 700;
+}
+.nav-links a.active {
+  color: var(--primary-color);
   font-weight: 700;
 }
 
@@ -404,9 +408,9 @@ ul {
 .check-list li, .exp-section ul:not(.check-list) li, .p-block ul li, .mt-2 li {
   position: relative;
   padding-left: 18px;
-  margin-bottom: 14px;
+  margin-bottom: 16px;
   color: var(--text-content);
-  line-height: 1.6;
+  line-height: 1.75;
   font-weight: 400;
   word-break: keep-all;
 }
@@ -485,15 +489,20 @@ ul {
   top: 24px;
   right: 24px;
   cursor: pointer;
-  background: var(--bg-light);
+  background: transparent;
   border-radius: 50%;
-  width: 44px;
-  height: 44px;
+  width: 48px;
+  height: 48px;
   display: flex;
   align-items: center;
   justify-content: center;
+  color: var(--text-muted);
+  border: none;
+  transition: background-color 0.2s, color 0.2s;
+}
+.modal-close:hover {
+  background-color: var(--bg-light);
   color: var(--text-main);
-  border: 1px solid var(--border-color);
 }
 
 .modal-header {
@@ -534,10 +543,10 @@ ul {
 .m-block ul li {
   position: relative;
   padding-left: 20px;
-  margin-bottom: 16px;
+  margin-bottom: 18px;
   color: var(--text-content);
   font-weight: 500;
-  line-height: 1.6;
+  line-height: 1.75;
 }
 
 .m-block ul li::before {
