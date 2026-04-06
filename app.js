@@ -5,11 +5,11 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('scroll', () => {
         if (window.scrollY > 50) {
             navbar.style.boxShadow = 'var(--shadow-sm)';
-            navbar.style.padding = '10px 0';
+            navbar.style.padding = '12px 0';
             
         } else {
             navbar.style.boxShadow = 'none';
-            navbar.style.padding = '16px 0';
+            navbar.style.padding = '20px 0';
         }
     });
 
@@ -23,7 +23,6 @@ document.addEventListener('DOMContentLoaded', () => {
             
             const targetElement = document.querySelector(targetId);
             if (targetElement) {
-                // Adjust scroll position for navbar
                 const navbarHeight = document.querySelector('.navbar').offsetHeight;
                 const targetPosition = targetElement.getBoundingClientRect().top + window.scrollY - navbarHeight - 20;
                 
@@ -32,7 +31,6 @@ document.addEventListener('DOMContentLoaded', () => {
                     behavior: 'smooth'
                 });
 
-                // Update active link
                 document.querySelectorAll('.nav-links a').forEach(link => link.classList.remove('active'));
                 this.classList.add('active');
             }
@@ -49,16 +47,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const observer = new IntersectionObserver((entries) => {
         entries.forEach((entry, index) => {
             if (entry.isIntersecting) {
-                // Add a small delay based on order for a "staggered" effect
                 setTimeout(() => {
                     entry.target.classList.add('visible');
-                }, index * 100); 
+                }, index * 80); // slightly faster stagger
                 observer.unobserve(entry.target);
             }
         });
     }, observerOptions);
 
-    // Group elements to animate
     const elementsToAnimate = [
         document.querySelector('.hero-content'),
         ...document.querySelectorAll('.section-title'),
@@ -70,13 +66,12 @@ document.addEventListener('DOMContentLoaded', () => {
     elementsToAnimate.forEach(el => {
         if(el) {
             el.style.opacity = '0';
-            el.style.transform = 'translateY(20px)';
-            el.style.transition = 'opacity 0.8s ease-out, transform 0.8s ease-out';
+            el.style.transform = 'translateY(24px)';
+            el.style.transition = 'opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1)';
             observer.observe(el);
         }
     });
 
-    // CSS class for when element becomes visible
     const style = document.createElement('style');
     style.innerHTML = `
         .visible {
@@ -86,41 +81,11 @@ document.addEventListener('DOMContentLoaded', () => {
     `;
     document.head.appendChild(style);
 
-    // 4. Dark Mode Toggle
-    const themeToggle = document.getElementById('checkbox');
-    const body = document.body;
-
-    // Check for saved theme
-    const savedTheme = localStorage.getItem('theme');
-    if (savedTheme === 'dark') {
-        body.classList.add('dark-mode');
-        themeToggle.checked = true;
-    }
-
-    const toggleTheme = () => {
-        const isDark = themeToggle.checked;
-        if (isDark) {
-            body.classList.add('dark-mode');
-            localStorage.setItem('theme', 'dark');
-        } else {
-            body.classList.remove('dark-mode');
-            localStorage.setItem('theme', 'light');
-        }
-        
-        // Force a repaint to prevent "lag" on mobile browsers
-        // Accessing offsetHeight triggers a layout reflow
-        void body.offsetHeight;
-    };
-
-    // Use both change and click for maximum responsiveness on different mobile OS
-    themeToggle.addEventListener('change', toggleTheme);
-
-    // 5. Modal Interactions
+    // 4. Modal Interactions
     const modalTriggers = document.querySelectorAll('.modal-trigger');
     const modals = document.querySelectorAll('.modal');
     const closeBtns = document.querySelectorAll('.modal-close');
 
-    // Open modal
     modalTriggers.forEach(trigger => {
         trigger.addEventListener('click', () => {
             const targetId = trigger.getAttribute('data-target');
@@ -132,7 +97,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Close modal
     closeBtns.forEach(btn => {
         btn.addEventListener('click', () => {
             modals.forEach(modal => modal.classList.remove('show'));
