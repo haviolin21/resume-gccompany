@@ -318,7 +318,7 @@ ul {
   border-bottom: 1px solid var(--border-color);
   align-items: flex-start;
 }
-.list-row:last-child {
+.list-row:last-child:not(.project-card) {
   border-bottom: none;
   padding-bottom: 0;
 }
@@ -375,10 +375,7 @@ ul {
   border-color: #D1D5DB;
 }
 
-.project-card .list-row {
-  border-bottom: none;
-  padding: 0;
-}
+/* removed inner row selector */
 
 .p-block p {
   color: var(--text-content);
